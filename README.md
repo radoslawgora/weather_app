@@ -1,5 +1,5 @@
 # weather_app
-WeatherApp in HTML/CSS/JS
+WeatherApp in HTML/CSS/JS making with youtube tutorial
 
 Data from https://www.weatherapi.com
 Icons from https://www.weatherapi.com/docs/#weather-icons
