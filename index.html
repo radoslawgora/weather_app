@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="weather-app">
+        <div class="container">
+            <div class="logo">
+                <img src="./icons/logo.png" alt="logo" />
+            </div>
+            <div>
+                <div class="city__time">
+                    <h1 class="city__name">London</h1>
+                    <small>
+                        <span class="time">06:00</span>
+                        -
+                        <span class="date">Monday September 19</span>
+                    </small>
+                </div>
+                <h1 class="temp">16&#176;</h1>
+                <div class="weather">
+                    <span class="conditions">Cloudy</span>
+                    <img src="./icons/day/113.png" class="weather__icon" alt="icon" width="50" height="50" />
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <form id="location__input">
+                <input type="text" class="search" placeholder="Search location..." />
+                <button type="submit" class="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <ul class="cities">
+                <h4>Popular cities</h4>
+                <li class="city">Warsaw</li>
+                <li class="city">Cracow</li>
+                <li class="city">Poznan</li>
+                <li class="city">Berlin</li>
+                <li class="city">London</li>
+                <li class="city">New York</li>
+                <li class="city">Paris</li>
+            </ul>
+            
+            <ul class="details">
+                <h4>Weather Details</h4>
+                <li>
+                    <span>Cloudy</span>
+                    <span class="cloud">89%</span>
+                </li>
+                <li>
+                    <span>Humidity</span>
+                    <span class="humidity">64%</span>
+                </li>
+                <li>
+                    <span>Wind</span>
+                    <span class="wind">8km/h</span>
+                </li>
+                <li>
+                    <span>Perceived temperature</span>
+                    <span class="perceived__temp">16&#176;</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
