@@ -163,7 +163,8 @@ h1, h3 {
     color: #fff;
 }
 
-.details li {
+.details li,
+.city__details li {
     display: flex;
     justify-content: space-between;
     align-items: center;

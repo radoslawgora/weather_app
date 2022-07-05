@@ -9,6 +9,9 @@ const cloudOutput = document.querySelector('.cloud');
 const humidityOutput = document.querySelector('.humidity');
 const windOutput = document.querySelector('.wind');
 const perceivedTempOutput = document.querySelector('.perceived__temp');
+const cityNameOutput = document.querySelector('.city__details--name');
+const cityRegionOutput = document.querySelector('.city__region');
+const cityCountryOutput = document.querySelector('.city__country');
 const form = document.getElementById('location__input');
 const search = document.querySelector('.search');
 const btn = document.querySelector('.submit');
@@ -82,6 +85,9 @@ function fetchWeatherData() {
         humidityOutput.innerHTML = data.current.humidity + "%";
         windOutput.innerHTML = data.current.wind_kph + "km/h";
         perceivedTempOutput.innerHTML = data.current.feelslike_c + "&#176;";
+        cityNameOutput.innerHTML = data.location.name;
+        cityRegionOutput.innerHTML = data.location.region;
+        cityCountryOutput.innerHTML = data.location.country;
 
         let timeOfDay = "day";
 
@@ -93,10 +99,10 @@ function fetchWeatherData() {
 
         const iconId = data.current.condition.icon.substr(`//cdn.weatherapi.com/weather/64x64/${timeOfDay}/`.length);
 
-        icon.src = `./icons/${timeOfDay}/${iconId}`;
+        icon.src = `http://serwer65591.lh.pl/weather.rgora.pl/icons/${timeOfDay}/${iconId}`;
 
         if(code == 1000) {
-            app.style.backgroundImage = `url(./images/${timeOfDay}/clear.webp)`;
+            app.style.backgroundImage = `url(http://serwer65591.lh.pl/weather.rgora.pl/images/${timeOfDay}/clear.webp)`;
 
             btn.style.background = "#5CAAC2";
             if(timeOfDay == "night") {
@@ -117,7 +123,7 @@ function fetchWeatherData() {
             code == 1279 ||
             code == 1282 
             ) {
-                app.style.backgroundImage = `url(./images/${timeOfDay}/cloudy.webp)`;
+                app.style.backgroundImage = `url(http://serwer65591.lh.pl/weather.rgora.pl/images/${timeOfDay}/cloudy.webp)`;
 
                 btn.style.background = "#22c0f1";
                 if(timeOfDay == "night") {
@@ -145,7 +151,7 @@ function fetchWeatherData() {
             code == 1249 ||
             code == 1252 
                 ) {
-                    app.style.backgroundImage = `url(./images/${timeOfDay}/rainy.webp)`;
+                    app.style.backgroundImage = `url(http://serwer65591.lh.pl/weather.rgora.pl/images/${timeOfDay}/rainy.webp)`;
     
                     btn.style.background = "#647d75";
                     if(timeOfDay == "night") {
@@ -154,7 +160,7 @@ function fetchWeatherData() {
                 }
         
         else {
-            app.style.backgroundImage = `url(./images/${timeOfDay}/snowy.webp)`;
+            app.style.backgroundImage = `url(http://serwer65591.lh.pl/weather.rgora.pl/images/${timeOfDay}/snowy.webp)`;
     
             btn.style.background = "#4d72aa";
             if(timeOfDay == "night") {
