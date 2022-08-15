@@ -11,3 +11,6 @@ Functions:
 - current weather,
 - weather detail,
 - location detail
+
+
+Demo: http://weather.rgora.pl
